@@ -1,0 +1,5 @@
+<h3>Search History:</h3>
+<p *ngFor="let item of items">
+  <a (click)='goToLink(item.url)'>{{item.name}}</a>
+  {{item.id}}, {{item.name}}, {{item.url}}
+</p>
