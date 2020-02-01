@@ -1,3 +1,5 @@
-<p>
-  lookup works!
-</p>
+<form #lookupForm="ngForm" class="form-inline my-2 my-lg-0" (ngSubmit)="search()">
+  <input class="form-control mr-sm-2" type="text" name="name" 
+    placeholder="Instagram Figure" required [(ngModel)]=model.name>
+  <button [disabled]="!lookupForm.valid" class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+</form>
