@@ -23,8 +23,4 @@ export class HistoryComponent implements OnInit {
     });
   }
 
-  goToLink(url: string){
-    window.open(url, '_blank');
-  }
-
 }

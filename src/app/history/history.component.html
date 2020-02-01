@@ -1,5 +1,4 @@
 <h3>Search History:</h3>
 <p *ngFor="let item of items">
-  <a (click)='goToLink(item.url)'>{{item.name}}</a>
-  {{item.id}}, {{item.name}}, {{item.url}}
+  <a href="{{item.url}}" target="_blank">{{item.name}}</a>
 </p>
