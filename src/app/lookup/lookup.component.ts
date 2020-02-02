@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SearchService } from '../_services/search.service';
 
@@ -9,6 +9,7 @@ import { SearchService } from '../_services/search.service';
 })
 export class LookupComponent implements OnInit {
   model: any = {};
+  @Output() gotResult = new EventEmitter();
 
   constructor(
     private searchService: SearchService
@@ -17,10 +18,12 @@ export class LookupComponent implements OnInit {
   ngOnInit() {
   }
 
+  // this function sends the search item to the DB (through the server)
+  // gets the result and sends it to the parent search component 
   search() {
     this.searchService.search(this.model).subscribe(
       next => {
-        console.log(next);
+        this.gotResult.emit(next);
     });
   }
 

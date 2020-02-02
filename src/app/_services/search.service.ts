@@ -13,4 +13,8 @@ export class SearchService {
   search(input: any) {
     return this.http.post(this.baseUrl + 'register', input);
   }
+
+  getHistory() {
+    return this.http.get(this.baseUrl);
+  }
 }

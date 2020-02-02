@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit, Input } from '@angular/core';
+import { SearchService } from '../_services/search.service';
 
 @Component({
   selector: 'app-history',
@@ -7,16 +7,20 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./history.component.css']
 })
 export class HistoryComponent implements OnInit {
+  @Input() resultFromSearchComp: string;
+  @Input() searchItemFromSearchComp: string;
   items: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private searchService: SearchService
+  ) { }
 
   ngOnInit() {
     this.getItems();
   }
 
   getItems() {
-    this.http.get('http://localhost:5000/api/figures').subscribe(response => {
+    this.searchService.getHistory().subscribe(response => {
       this.items = response;
     }, error => {
       console.log(error);
