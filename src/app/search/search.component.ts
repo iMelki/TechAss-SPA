@@ -17,5 +17,6 @@ export class SearchComponent implements OnInit {
   showResult(result: any) {
     this.searchItem = result.name;
     this.result = result.url;
+    console.log(result.newRl);
   }
 }
