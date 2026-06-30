@@ -1,5 +1,15 @@
 # TechAssSPA
 
+> Archived candidate: this repository is retained for historical reference.
+> It is no longer maintained and uses unsupported Angular/Node-era
+> dependencies. Do not use it as a basis for new production work without a full
+> dependency, build, and security review.
+
+Status: archive recommended; repository settings have not yet been changed.
+Maintenance: no routine issues, pull requests, or dependency updates are
+expected unless the project is explicitly revived.
+Successor: none known.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
 
 ## Development server
