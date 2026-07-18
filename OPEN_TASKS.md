@@ -11,6 +11,11 @@ checkout discoverable for agents.
 
 ## Completed In This Repo
 
+- Resolved [TechAss-SPA#39 - Resolve current critical/high dependency alerts and repair legacy CI](https://github.com/iMelki/TechAss-SPA/issues/39):
+  pinned `websocket-driver` 0.7.5 and `adm-zip` 0.6.0 in the existing v1
+  lockfile, then moved the Azure build to `main`, Node 16, `npm ci`, and the
+  repository's locked Angular CLI. Full Angular modernization remains outside
+  this bounded maintenance repair.
 - Added a README historical/archive notice.
 - Added `docs/archival-decision-2026-06-30.md` with the public/private archive
   criteria and explicit non-actions.
